@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Felipe Quadros (Blog do Perera)</title>
+    <description>Um Desenvolvedor com o intuito de aprender e repassar o conteúdo aprendido. :)
+</description>
+    <link>http://felipequadros.com/</link>
+    <atom:link href="http://felipequadros.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 15 May 2016 19:58:05 -0300</pubDate>
+    <lastBuildDate>Sun, 15 May 2016 19:58:05 -0300</lastBuildDate>
+    <generator>Jekyll v3.1.3</generator>
+    
+      <item>
+        <title>Bem Vindos</title>
+        <description>&lt;p&gt;Vamos descobrir o que esse blog será.&lt;/p&gt;
+
+&lt;p&gt;Tenho assumido vários papéis nos últimos tempos (professor, aluno, empresário, desenvolvedor, vendedor, faxineiro, investidor, diretor financeiro, cartoleiro, etc), e convivido com uma galera muito f*d@.&lt;/p&gt;
+
+&lt;p&gt;Trabalho junto a um excelente rapaz que desde o primeiro dia na empresa ele foi bem sincero ao admitir que não sabia nada sobre qualquer área de desenvolvimento de software, mas que gostaria muito de aprender.&lt;/p&gt;
+
+&lt;p&gt;Nas primeiras duas semanas ele fez a área administrativa de um site em Laravel com a ajuda da equipe da empresa, e essa experiência de passar conhecimento e aprender junto tem me feito experimentar a possibilidade real de crescimento através da troca sincera de conhecimento.&lt;/p&gt;
+
+&lt;p&gt;Espero fazer isso com o blog. Preciso me acostumar a escrever, então tomarei uma cerveja diferente a cada post escrito.&lt;/p&gt;
+
+&lt;p&gt;Hoje vou de Skol Latão por que eu to de ressaca e consequente preguiça de comprar uma melhor.&lt;/p&gt;
+
+&lt;p&gt;Vlw flw.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 May 2016 19:45:00 -0300</pubDate>
+        <link>http://felipequadros.com/primeiro-post/artigo-livre/blog/2016/05/15/bem-vindos/</link>
+        <guid isPermaLink="true">http://felipequadros.com/primeiro-post/artigo-livre/blog/2016/05/15/bem-vindos/</guid>
+        
+        
+        <category>primeiro-post</category>
+        
+        <category>artigo-livre</category>
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>
