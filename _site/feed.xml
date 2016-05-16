@@ -6,9 +6,127 @@
 </description>
     <link>http://felipequadros.com/</link>
     <atom:link href="http://felipequadros.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 May 2016 19:58:05 -0300</pubDate>
-    <lastBuildDate>Sun, 15 May 2016 19:58:05 -0300</lastBuildDate>
+    <pubDate>Sun, 15 May 2016 23:30:21 -0300</pubDate>
+    <lastBuildDate>Sun, 15 May 2016 23:30:21 -0300</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
+    
+      <item>
+        <title>O que são meta tags HTML e quais utilizarei nesse blog?</title>
+        <description>&lt;p&gt;É isso mesmooo, temos nosso primeiro artigo, e será sobre meta tags!! Mas por quê? Por que eu to indo criar as meta tags desse blog agora, e após fuçar o &lt;a href=&quot;http://www.akitaonrails.com/&quot;&gt;blog do akita&lt;/a&gt; e o &lt;a href=&quot;www.maujor.com&quot;&gt;blog do dinossauro das CSS&lt;/a&gt; nota-se claramente que há meta tags pra caramba no mundo e eu não posso ficar aqui parado.&lt;/p&gt;
+
+&lt;p&gt;Só um minuto que esqueci o latão de skol…. Pronto, simbora.&lt;/p&gt;
+
+&lt;h2 id=&quot;beleza-fera-mas-o-que-so-meta-tags&quot;&gt;Beleza fera, mas o que são meta tags?&lt;/h2&gt;
+&lt;p&gt;Segundo a wiki do &lt;a href=&quot;https://www.w3.org/wiki/HTML/Elements/meta&quot;&gt;W3C&lt;/a&gt; meta tags são:
+“The &lt;meta /&gt; element represents various kinds of metadata that cannot be expressed using the title, base, link, style, and script elements.”
+&lt;strong&gt;Em HuehueBR&lt;/strong&gt; - Segundo o W3C (2012), o elemento &lt;meta /&gt; representa uma variedade de metadados que não podem ser expressados usando os elementos title, base, link, style e script.&lt;/p&gt;
+
+&lt;p&gt;Ou seja, várias informações sobre a sua página serão declaradas em tags &lt;meta /&gt;, &lt;strong&gt;o que implica dizer que ela trabalha com metadados&lt;/strong&gt; e onde suponho surgiu o nome dessa tag.
+Sendo assim, utilizaremos as meta tags para “informar informações” relativas ao nosso site, para facilitar o trabalho de um tanto de gente, como - por exemplo - do &lt;a href=&quot;https://www.facebook.com/felipepereira.quadrosmaia&quot;&gt;facebook&lt;/a&gt;, que utiliza das informações colocadas por você (desenvolvedor) nas tag meta para apresentar uma publicação de uma página de forma linda e agradável - com imagens, descrições e o escambaul - na timeline.&lt;/p&gt;
+
+&lt;p&gt;Normalmente - eu disse &lt;strong&gt;NORMALMENTE&lt;/strong&gt; - a tag &lt;meta /&gt; tem dois atributos, um atributo define o funcionamento da tag meta e o outro atributo o conteúdo dessa tag. Beleza, tô confuso, vamos mostrar. Quando eu digo definir, isso quer dizer que dependendo do atributo declarado saberemos qual é o tipo do metadado que está no abributo de conteúdo. Sendo assim temos os atributos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;name&lt;/strong&gt; que quando está sendo utilizado é um metadado a nível de documento, por ex:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;description&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Meta tag que traz a descrição da sua página
+e comumente utilizada pelo google para dar uma prévia sobre
+as páginas no resultado da busca&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Os S.E.O pira --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;http-equiv&lt;/strong&gt; quando declarado, é utilizado para simular um cabeçalho de resposta HTTP com o intuito de controlar as ações do browser. Ele não serve para sobrescrever a resposta HTTP do servidor. Um exemplo seria controlar o ato de cachear a página:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cache-control&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;no-cache&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;itemprop&lt;/strong&gt; vem de uma parada muito louca chamada &lt;a href=&quot;https://www.w3.org/TR/microdata/#content-models&quot;&gt;microdata&lt;/a&gt; do HTML5 que pode ser tema de uma próxima conversa. Quando setado em uma tag meta você pode omitir o atributo name, http-equiv e charset e é obrigatório ter o content. O google utiliza esses metas, por exemplo, no google plus “para apresentar uma publicação de uma página de forma linda e agradável - com imagens, descrições e o escambaul - na timeline”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemprop=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;author&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Perera&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Meu nome por que sou o autor dessa bagaça de artigo --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Passamos da fase da teoria para dar aquela analisada básica nas tags que irei utilizar nesse blog. Se você der uma olhada no código html da página verá-lhe-lho-as no código.&lt;/p&gt;
+
+&lt;h2 id=&quot;quais-meta-tags-utilizarei-no-blog&quot;&gt;Quais meta tags utilizarei no blog?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Charset&lt;/strong&gt;
+Imprescindível! Muito pequeno gafanhoto se ferra pois o seu arquivo não está sendo lido corretamente devido ao charset. Essa tag fala pro browser qual o charset é utilizado por você.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Meu nome por que sou o autor dessa bagaça de artigo --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Keywords&lt;/strong&gt;
+A keywords é um clássico que foi mal utilizado durante bom tempo e agora o google a desconsidera. O pessoal descobriu que era só colocar as palavras que todo mundo tava procurando para que seu site sofresse uma alavancagem nos resultados da busca. Hoje em dia os buscadores levam em consideração a coerência semântica, ou seja, se as palavras chaves estiverem coerente com o conteúdo da sua página ela é melhor rankeada.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;keywords&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;html, meta tags, microdata, front-end, s.e.o,
+HTML5, http, http-equiv, w3c&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Meu nome por que sou o autor dessa bagaça de artigo --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Viewport&lt;/strong&gt;
+Como bem disse o Diego Eis do Tableless &lt;a href=&quot;http://tableless.com.br/manipulando-metatag-viewport/&quot;&gt;nesse artigo&lt;/a&gt;, viewport é a área da tela onde seu website aparece. As definições do viewport são providenciais para que possamos controlar a visualização em vários tamanhos de tela. Caso queira saber mais leia o artigo do Diego que é duca.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1,
+user-scalable=no&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;
+Essa meta dá uma descrição resumida da sua página. Utilizo normalmente a primeira frase do artigo pois é isso que aparece na descrição de um resultado no google, consequentemente minha primeira frase deve ter claramente o assunto tratado.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;description&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;É isso mesmooo, temos nosso primeiro artigo,
+e será sobre meta tags!! Mas por quê? Por que eu to indo criar as meta tags
+desse blog agora, e após fuçar o blo..&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Autor&lt;/strong&gt;
+Nesse caso temos uma verdadeira assinatura dos créditos de quem escreveu a página.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;author&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Perera&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Itemprop Author, name e description&lt;/strong&gt;
+Coloquei essas metas juntas pois elas são exatamente a mesma coisa das metas com name description, author. E a de itemprop = name é relacionado a tag title. São informações duplicadas declaradas de forma diferente para abranger, por exemplo, o google plus.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemprop=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;author&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Perera&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemprop=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;O que são meta tags HTML e quais utilizarei
+nesse blog?&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;itemprop=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;description&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;É isso mesmooo, temos nosso primeiro
+artigo,e será sobre meta tags!! Mas por quê? Por que eu to indo criar as
+meta tags desse blog agora,e após fuçar o blo..&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Meta tags do facebook&lt;/strong&gt;
+E pra finalizar, como exemplo gigantesco, segue as meta tags do open graph do facebook. A partir dessas declarações, ele define como publicar e mapear a sua página no facebook.
+Acabou a cerveja, então não vou explicar uma a uma, pesquisa ae seu vagabundo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fb:app_id&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;333451410072252&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:locale&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pt_BR&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:type&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;article&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:title&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;O que são meta tags HTML e quais utilizarei nesse blog?&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:description&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;É isso mesmooo, temos nosso primeiro
+artigo,e será sobre meta tags!! Mas por quê? Por que eu to indo criar as
+meta tags desse blog agora,e após fuçar o blo..&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:url&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://felipequadros.com/meta-tags/html/front-end/2016/05/15/meta-tags-do-blog/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:site_name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Blog do Perera&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;article:publisher&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.facebook.com/felipepereira.quadrosmaia&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;article:author&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.facebook.com/felipepereira.quadrosmaia&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;article:section&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;HTML&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Agora que você já ta o bixão em meta tags, vai dar uma lida sobre a relação das meta tags e o S.E.O . A pessoa que não dá uma lida em S.E.O bom sujeito não é.&lt;/p&gt;
+
+&lt;p&gt;É o primeiro artigo e gostei demais do assunto, sempre ficava perdido com algumas metas. Nesse momento não tem plugin de comentários, mas entrem em contato comigo pelo &lt;a href=&quot;https://www.facebook.com/felipepereira.quadrosmaia&quot;&gt;meu face&lt;/a&gt; e vamos trocar ideia!!&lt;/p&gt;
+
+&lt;p&gt;Acho que o próximo será sobre o Jekyll que é o bixão demais. Abraços!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 May 2016 20:15:00 -0300</pubDate>
+        <link>http://felipequadros.com/meta-tags/html/front-end/2016/05/15/meta-tags-do-blog/</link>
+        <guid isPermaLink="true">http://felipequadros.com/meta-tags/html/front-end/2016/05/15/meta-tags-do-blog/</guid>
+        
+        
+        <category>meta-tags</category>
+        
+        <category>html</category>
+        
+        <category>front-end</category>
+        
+      </item>
     
       <item>
         <title>Bem Vindos</title>
