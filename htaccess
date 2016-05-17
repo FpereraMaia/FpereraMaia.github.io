@@ -2,9 +2,25 @@
 layout: none
 permalink: .htaccess
 ---
-<IfModule mod_expires.c>
-# Enable expirations
-ExpiresActive On
-# HTML
-ExpiresByType text/html "access plus 2 days"
+AddType application/vnd.ms-fontobject    .eot
+AddType application/x-font-opentype      .otf
+AddType image/svg+xml                    .svg
+AddType application/x-font-ttf           .ttf
+AddType application/font-woff            .woff
+AddType application/vnd.ms-fontobject .eot
+AddType font/ttf .ttf
+AddType font/otf .otf
+AddType application/x-font-woff .woff
+
+# Compressão gzip
+<IfModule mod_deflate.c>
+  # html, txt, css, js, json, xml, htc:
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
+  # webfonts e svg:
+  <FilesMatch ".(ttf|otf|eot|svg)$" >
+  #<filesmatch .(.jpg|.gif|.png|.tiff|.ico|js|css)$="">
+    SetOutputFilter DEFLATE
+  </FilesMatch>
 </IfModule>
