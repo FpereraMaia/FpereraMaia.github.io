@@ -8,7 +8,7 @@ date:   2016-05-15 20:15:00 -0300
 section: HTML
 ---
 
-É isso mesmooo, temos nosso primeiro artigo, e será sobre meta tags!! Mas por quê? Por que eu to indo criar as meta tags desse blog agora, e após fuçar o [blog do akita](http://www.akitaonrails.com/) e o [blog do dinossauro das CSS](www.maujor.com) nota-se claramente que há meta tags pra caramba no mundo e eu não posso ficar aqui parado.
+É isso mesmooo, temos nosso primeiro artigo, e será sobre meta tags!! Mas por quê? Por que eu to indo criar as meta tags desse blog agora, e após fuçar o [blog do akita](http://www.akitaonrails.com/) e o [blog do dinossauro das CSS](http://www.maujor.com) nota-se claramente que há meta tags pra caramba no mundo e eu não posso ficar aqui parado.
 
 Só um minuto que esqueci o latão de skol.... Pronto, simbora.
 
