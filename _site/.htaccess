@@ -23,14 +23,13 @@ AddType font/otf .otf
 AddType application/x-font-woff .woff
 
 # Compressão gzip
-<IfModule mod_deflate.c>
-  # html, txt, css, js, json, xml, htc:
-  AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
-  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
-  AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
-  # webfonts e svg:
-  <FilesMatch ".(ttf|otf|eot|svg)$" >
-  #<filesmatch .(.jpg|.gif|.png|.tiff|.ico|js|css)$="">
-    SetOutputFilter DEFLATE
-  </FilesMatch>
-</IfModule>
+
+# html, txt, css, js, json, xml, htc:
+AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
+# webfonts e svg:
+<FilesMatch ".(ttf|otf|eot|svg)$" >
+#<filesmatch .(.jpg|.gif|.png|.tiff|.ico|js|css)$="">
+SetOutputFilter DEFLATE
+</FilesMatch>
