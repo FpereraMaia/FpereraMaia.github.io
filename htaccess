@@ -56,3 +56,6 @@ ExpiresByType text/css "access plus 1 month"
 # JS
 ExpiresByType text/javascript "access plus 1 month"
 </IfModule>
+
+Header unset ETag
+FileETag None
