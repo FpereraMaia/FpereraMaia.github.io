@@ -3,7 +3,7 @@ layout: post
 autor: felipeQuadros
 title: O que são meta tags HTML e quais utilizarei nesse blog?
 categories: meta-tags html front-end
-keywords: html, meta tags, microdata, front-end, s.e.o,HTML5, http, http-equiv, w3c
+keywords: html, meta tags, microdata, front-end, SEO,HTML5, http, http-equiv, w3c
 date:   2016-05-15 20:15:00 -0300
 section: HTML
 ---
@@ -27,7 +27,7 @@ Normalmente - eu disse **NORMALMENTE** - a tag <meta> tem dois atributos, um atr
 <meta name="description" content="Meta tag que traz a descrição da sua página
 e comumente utilizada pelo google para dar uma prévia sobre
 as páginas no resultado da busca" />
-<!-- Os S.E.O pira -->
+<!-- Os SEO pira -->
 {% endhighlight %}
 
 - **http-equiv** quando declarado, é utilizado para simular um cabeçalho de resposta HTTP com o intuito de controlar as ações do browser. Ele não serve para sobrescrever a resposta HTTP do servidor. Um exemplo seria controlar o ato de cachear a página:
@@ -53,7 +53,7 @@ Imprescindível! Muito pequeno gafanhoto se ferra pois o seu arquivo não está 
 **Keywords**
 A keywords é um clássico que foi mal utilizado durante bom tempo e agora o google a desconsidera. O pessoal descobriu que era só colocar as palavras que todo mundo tava procurando para que seu site sofresse uma alavancagem nos resultados da busca. Hoje em dia os buscadores levam em consideração a coerência semântica, ou seja, se as palavras chaves estiverem coerente com o conteúdo da sua página ela é melhor rankeada.
 {% highlight html %}
-<meta name="keywords" content="html, meta tags, microdata, front-end, s.e.o,
+<meta name="keywords" content="html, meta tags, microdata, front-end, SEO,
 HTML5, http, http-equiv, w3c">
 <!-- Meu nome por que sou o autor dessa bagaça de artigo -->
 {% endhighlight %}
@@ -103,7 +103,7 @@ meta tags desse blog agora,e após fuçar o blo.." />
 <meta property="article:section" content="HTML" />
 {% endhighlight %}
 
-Agora que você já ta o bixão em meta tags, vai dar uma lida sobre a relação das meta tags e o S.E.O . A pessoa que não dá uma lida em S.E.O bom sujeito não é.
+Agora que você já ta o bixão em meta tags, vai dar uma lida sobre a relação das meta tags e o SEO . A pessoa que não dá uma lida em SEO bom sujeito não é.
 
 É o primeiro artigo e gostei demais do assunto, sempre ficava perdido com algumas metas. Nesse momento não tem plugin de comentários, mas entrem em contato comigo pelo [meu face](https://www.facebook.com/felipepereira.quadrosmaia) e vamos trocar ideia!!
 
