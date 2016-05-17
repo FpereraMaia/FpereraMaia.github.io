@@ -7,7 +7,7 @@
 
 # Site settings
 title: Felipe Quadros (Blog do Perera)
-email: felipepqm@gmail.com
+
 description: > # this means to ignore newlines until "baseurl:"
   Um Desenvolvedor com o intuito de aprender e repassar o conteúdo aprendido estudando desenvolvimento web. :)
 baseurl: "" # the subpath of your site, e.g. /blog
