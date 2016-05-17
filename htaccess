@@ -2,6 +2,8 @@
 layout: none
 permalink: .htaccess
 ---
+AddHandler php56-script .php
+suPHP_ConfigPath /home/felipequadros1/
 
 <IfModule mod_headers.c>
 # Set XSS Protection header
