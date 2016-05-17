@@ -1,0 +1,10 @@
+---
+layout: none
+permalink: .htaccess
+---
+<IfModule mod_expires.c>
+# Enable expirations
+ExpiresActive On
+# HTML
+ExpiresByType text/html "access plus 2 days"
+</IfModule>
