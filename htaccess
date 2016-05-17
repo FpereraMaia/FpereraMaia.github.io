@@ -10,15 +10,15 @@ Header set X-XSS-Protection "1; mode=block"
 
 # Compressão gzip
 
-# html, txt, css, js, json, xml, htc:
-AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
-AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
-AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
-# webfonts e svg:
-<FilesMatch ".(ttf|otf|eot|svg)$" >
-#<filesmatch .(.jpg|.gif|.png|.tiff|.ico|js|css)$="">
-SetOutputFilter DEFLATE
-</FilesMatch>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
 
 <IfModule mod_expires.c>
 # Enable expirations
