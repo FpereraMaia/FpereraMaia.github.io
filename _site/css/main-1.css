@@ -1,6 +1,6 @@
 /**
- * Reset some basic elements
- */
+* Reset some basic elements
+*/
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -8,8 +8,8 @@ dl, dd, ol, ul, figure {
   padding: 0; }
 
 /**
- * Basic styling
- */
+* Basic styling
+*/
 body {
   font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #111;
@@ -22,8 +22,8 @@ body {
   font-kerning: normal; }
 
 /**
- * Set `margin-bottom` to maintain vertical rhythm
- */
+* Set `margin-bottom` to maintain vertical rhythm
+*/
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -31,15 +31,15 @@ ul, ol, dl, figure,
   margin-bottom: 15px; }
 
 /**
- * Images
- */
+* Images
+*/
 img {
   max-width: 100%;
   vertical-align: middle; }
 
 /**
- * Figures
- */
+* Figures
+*/
 figure > img {
   display: block; }
 
@@ -47,8 +47,8 @@ figcaption {
   font-size: 14px; }
 
 /**
- * Lists
- */
+* Lists
+*/
 ul, ol {
   margin-left: 30px; }
 
@@ -57,14 +57,14 @@ li > ol {
   margin-bottom: 0; }
 
 /**
- * Headings
- */
+* Headings
+*/
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 /**
- * Links
- */
+* Links
+*/
 a {
   color: #2a7ae2;
   text-decoration: none; }
@@ -75,8 +75,8 @@ a {
     text-decoration: underline; }
 
 /**
- * Blockquotes
- */
+* Blockquotes
+*/
 blockquote {
   color: #828282;
   border-left: 4px solid #e8e8e8;
@@ -88,8 +88,8 @@ blockquote {
     margin-bottom: 0; }
 
 /**
- * Code formatting
- */
+* Code formatting
+*/
 pre,
 code {
   font-size: 15px;
@@ -109,8 +109,8 @@ pre {
     padding-left: 0; }
 
 /**
- * Wrapper
- */
+* Wrapper
+*/
 .wrapper {
   max-width: -webkit-calc(800px - (30px * 2));
   max-width: calc(800px - (30px * 2));
@@ -126,16 +126,16 @@ pre {
       padding-left: 15px; } }
 
 /**
- * Clearfix
- */
+* Clearfix
+*/
 .wrapper:after, .footer-col-wrapper:after {
   content: "";
   display: table;
   clear: both; }
 
 /**
- * Icons
- */
+* Icons
+*/
 .icon > svg {
   display: inline-block;
   width: 16px;
@@ -144,6 +144,57 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em; }
+
+  @page {
+    margin: 0.5cm; }
+  nav, footer, video, audio, object, embed {
+    display: none; }
+
+  img {
+    max-width: 100%; }
+
+  body {
+    font: 12pt Georgia, "Times New Roman", Times, serif;
+    color: #000; }
+
+  h1 {
+    font-size: 24pt; }
+
+  h2 {
+    font-size: 18pt; }
+
+  h3 {
+    font-size: 14pt; }
+
+  a, a:visited {
+    text-decoration: underline; }
+
+  a:link:after, a:visited:after {
+    content: " (" attr(href) ") "; }
+
+  a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+
+  p a {
+    word-wrap: break-word; }
+
+  p {
+    widows: 3; }
+
+  p {
+    orphans: 3; } }
 /**
  * Site header
  */
