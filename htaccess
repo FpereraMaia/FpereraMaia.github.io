@@ -3,6 +3,10 @@ layout: none
 permalink: .htaccess
 ---
 
+<IfModule mod_headers.c>
+# Set XSS Protection header
+Header set X-XSS-Protection "1; mode=block"
+</IfModule>
 
 <IfModule mod_expires.c>
 # Enable expirations
