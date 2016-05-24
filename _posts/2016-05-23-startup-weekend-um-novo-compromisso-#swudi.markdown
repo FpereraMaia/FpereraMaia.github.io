@@ -52,7 +52,7 @@ O nosso amigo Coach Renan Teixeira ficou encarregado do pitch, enquanto eu escre
 
 - Tivemos uma palestra sobre pitch nesse dia para nos ajudar.
 
-Ao fim do evento, tivemos uma palestra com um Japonês de 30 anos que parecia ter 15 (pesquisando o nome, falha minha esqueci) falando sobre Design, o tema proposto da palestra foi excelente!
+Ao fim do evento o pitch final foi para jurados que me deixaram impressionados com a capacidade de percepção de vários negócios, eles não davam uma dica furada! Enquanto saia o resultado, tivemos uma palestra com um Japonês de 30 anos que parecia ter 15 (pesquisando o nome, falha minha esqueci) falando sobre Design. O tema proposto da palestra foi excelente!
 
 E finalmente foram anunciados os vencedores. A ideia vencedora foi a PoupeCent$ onde nosso amigo Montesclarense do Minas UP [Paulo Sidônio](https://www.facebook.com/paulohenrique.martins.921) participou. Já dei os parabéns pessoalmente, mas gostaria de deixar frisado que a ideia é excelente e mereceram com louvor ganhar. Em resumo, a ideia consiste em transformar aquelas balinhas que a gente recebe como troco em dinheiro de fato, nunca mais haverão balinhas no lugar de moedas de um centavo.
 
