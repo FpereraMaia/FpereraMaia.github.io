@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta property="fb:app_id"        content="966242223397117" />
   <meta property="og:locale"        content="pt_BR" />
-  <meta property="og:url"           content="{{ site.url }}/{{ post.url }}" />
+  <meta property="og:url"           content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:site_name"     content="Blog do Perera" />
   <meta property="og:type"          content="article" />
   <meta property="og:title"         content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
