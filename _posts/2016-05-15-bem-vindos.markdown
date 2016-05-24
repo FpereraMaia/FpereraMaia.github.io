@@ -5,6 +5,8 @@ title: Bem Vindos
 categories: primeiro-post artigo-livre blog
 excerpt: Tenho assumido vários papéis na vida (professor, aluno, empresário, desenvolvedor, vendedor, faxineiro, investidor, diretor financeiro, cartoleiro, etc), e convivido com uma galera muito f*d@.
 date:   2016-05-15 19:45:00 -0300
+cervejaDoDia: Latão de Skol
+linkCerveja: http://www.skol.com.br/produtos/lata-550ml-19
 ---
 Vamos descobrir o que esse blog será.
 

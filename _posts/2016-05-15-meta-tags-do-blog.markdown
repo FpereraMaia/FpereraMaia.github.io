@@ -6,6 +6,8 @@ categories: meta-tags html front-end
 keywords: html, meta tags, microdata, front-end, SEO,HTML5, http, http-equiv, w3c
 date:   2016-05-15 20:15:00 -0300
 section: HTML
+cervejaDoDia: Latão de Skol
+linkCerveja: http://www.skol.com.br/produtos/lata-550ml-19
 ---
 
 É isso mesmooo, temos nosso primeiro artigo, e será sobre meta tags!! Mas por quê? Por que eu to indo criar as meta tags desse blog agora, e após fuçar o [blog do akita](http://www.akitaonrails.com/) e o [blog do dinossauro das CSS](http://www.maujor.com) nota-se claramente que há meta tags pra caramba no mundo e eu não posso ficar aqui parado.
