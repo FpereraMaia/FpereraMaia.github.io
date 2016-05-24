@@ -41,7 +41,7 @@ Somos guiados por uma série de tarefas assim listadas:
 
 * Definição do problema (Pessoas são indisciplinadas e não mantém uma periodicidade em exercícios físicos)
 * Validação do problema (Saímos nas ruas de Uberlândia e na internet descobrindo se as pessoas fazem exercício, com que periodicidade e o motivo delas faltarem ou delas persistirem na prática de exercícios físicos. Entrevistamos 180 pessoas).
-* Sugestão de Solução para o problema validado (Constatamos na pesquisa que as pessoas se desmotivam pro preguiça em sua maioria, e que elas se motivam devido a saúde e acompanhamento de amigos nas práticas físicas. Sendo assim, nossa solução foi que uma pessoa desafie outra a perder peso. Caso ela cumpra o desafio, ela ganha dinheiro, caso ela perca ela perde dinheiro).
+* Sugestão de Solução para o problema validado (Constatamos na pesquisa que as pessoas se desmotivam por preguiça em sua maioria, e que elas se motivam devido a saúde e acompanhamento de amigos nas práticas físicas. Sendo assim, nossa solução foi que uma pessoa desafie outra a perder peso. Caso ela cumpra o desafio, ela ganha dinheiro, caso ela perca ela perde dinheiro).
 * Validação da Solução (Criamos um protótipo para validar. Nosso protótipo foi ir a rua e fazer com que o desafio fosse feito e que as pessoas passassem o dinheiro via Moip. Conseguimos 4 participantes).
 
 Claro galera, que 180 pessoas para validar o erro e 4 participantes utilizando é pouco pra falar que a solução funciona, entretanto, o papel do Startup Weekend é **EDUCAR**, e ao realizar essas tarefas na prática e na pressão entendemos perfeitamente TODAS as ideias propostas.
