@@ -9,10 +9,7 @@ section: EVENTOS
 cervejaDoDia: Baden Baden - Golden
 linkCerveja: https://www.badenbaden.com.br/cervejas/golden/
 ---
-#TEXTÃO DETECTED
-
-# Vocês já ouviram falar da iniciativa Startup Weekend?
-
+# Vocês já ouviram falar da iniciativa Startup Weekend? #TEXTÃO DETECTED
 Imagino que você seja um homem de negócios, um desenvolvedor ou um designer que tem mais ou menos 952,459 ideias de novas soluções por hora. Levando isso em consideração, surge logo de cara uma pergunta - Como que irei fazer com que a minha ideia solucione problemas?
 
 Se você já está pensando em construir uma app que vale mais que barras de ouro, vai resolver o problema da zika/chikungunya e ainda vai ser divertido conseguindo um faturamento de 1 Bilhão anual, te aconselho a continuar lendo esse artigo e participar de um Startup Weekend.
