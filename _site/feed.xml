@@ -6,9 +6,95 @@
 </description>
     <link>http://felipequadros.com/</link>
     <atom:link href="http://felipequadros.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 May 2016 09:31:49 -0300</pubDate>
-    <lastBuildDate>Wed, 25 May 2016 09:31:49 -0300</lastBuildDate>
+    <pubDate>Sun, 05 Jun 2016 16:48:08 -0300</pubDate>
+    <lastBuildDate>Sun, 05 Jun 2016 16:48:08 -0300</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
+    
+      <item>
+        <title>Tipagem Fraca, Forte, Estática, Dinâmica e Inferência de Tipo</title>
+        <description>&lt;p&gt;Nas últimas semanas tenho descoberto que existe um débito técnico muito grande em relação a programação.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Débito técnico: leia-se uma forma bonita que aprendi a falar para mostrar que tenho uma grande capacidade de programar sem saber de fato a aplicação, teoria, filosofia daquilo que está sendo escrito.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;E foi daí que nasceu o assunto desse post. Um grande amigo me perguntou o que seria tipagem fraca, e eu, no auge da ignorância respondi que quando há declaração explícita de tipo na linguagem (string, integer, etc, etc), isso quer dizer que é uma linguagem fortemente tipada, e quando não temos essa declaração explícita, temos uma linguagem fraca. (Um brinde a ignorância, lá se foi meio Mega Latão). Nesses tempos turvos de muita informação e pouca formação a gente tem preguiça de pensar. Entretanto fui a luta e descobri não só a tipagem fraca e forte, mas também a inferência de tipo, a estática e a dinâmica.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tipagem fraca, forte, dinâmica, estática e inferência de tipos são 5 conceitos diferentes&lt;/strong&gt; - só pra ficar bem claro.&lt;/p&gt;
+
+&lt;h1 id=&quot;inferncia-de-tipo&quot;&gt;Inferência de Tipo&lt;/h1&gt;
+
+&lt;p&gt;A inferência de tipos é a capacidade do compilador entender/’adivinhar’ qual é o tipo de dados de determinada variável sem ela ter sido declarada no código escrito. Isso, mastigue o conceito com calma tomando a sua cerveja.&lt;/p&gt;
+
+&lt;p&gt;Vamos aos exemplos. No C# temos inferência de tipo ao declarar variáveis locais com o “var” antes do nome da nossa variável, tipo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inferencia&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Nossa&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vari&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;á&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vel&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inferencia&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ter&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;á&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seu&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tipo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setado&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;em&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;compila&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;çã&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;A lá, que beleza. Não declaramos tipo nenhum, mas na hora que o compilador enxerga o valor ele entende que é uma variável do tipo int, e é essa capacidade que define que uma linguagem &lt;strong&gt;infere tipos&lt;/strong&gt;. Temos PHP, Python , Javascript, etc. Um exemplo contrário seria o Java, nela o tipo deve ser determinado na declaração da variável (Pelo que pesquisei está tendo um esforço gradual em colocar a inferência de tipo no java há algum tempo ver &lt;a href=&quot;http://openjdk.java.net/jeps/286&quot;&gt;JEP 286: Local-Variable Type Inferecen&lt;/a&gt; ).&lt;/p&gt;
+
+&lt;h1 id=&quot;tipagem-forte-e-fraca&quot;&gt;Tipagem Forte e Fraca&lt;/h1&gt;
+
+&lt;p&gt;Uma forma simples de definir a tipagem forte e fraca é que, caso ela seja forte, teremos a verificação de tipos em todas as operações em tempo de execução ou compilação, já a fraca não temos essa verificação.&lt;/p&gt;
+
+&lt;p&gt;Por exemplo, temos nosso amigo Javascript que é uma tipagem fraca, ou seja, além de não ter a capacidade de detectar erros em operações de tipos diferentes, ela nos dá um resultado nas operações de tipos diferentes, mas como assim?&lt;/p&gt;
+
+&lt;p&gt;Em Javascript podemos fazer:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s1&quot;&gt;&#39;1&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// o resultado será &#39;11&#39;&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;&#39;1&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// o resultado será 1true&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Abra seu navegador e teste amiguinho. O PHP é uma outra linguagem de tipagem fraca.&lt;/p&gt;
+
+&lt;p&gt;Um Exemplo de tipagem forte seria o Python. Fazendo as mesmas operações do Javascript no python temos:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;s&quot;&gt;&#39;1&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Traceback&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;stdin&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cannot&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concatenate&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;str&#39;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;int&#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;&#39;1&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Traceback&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;stdin&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cannot&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concatenate&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;str&#39;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;bool&#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;objects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Note que PHP tem tipagem fraca e o Python tem tipagem forte mas as duas linguagens tem Inferência de Tipos.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;tipagem-esttica-e-dinmica&quot;&gt;Tipagem Estática e Dinâmica&lt;/h1&gt;
+
+&lt;p&gt;Tipagem Estática é a capacidade de uma linguagem ajudar na segurança de tipos, onde, a partir do momento que uma linguagem determina o tipo de uma variável esse tipo não pode ser alterado durante a compilação, fazendo com que o jovem programador não se preocupe tanto pois o compilador acusará erro caso seja alterado o tipo de uma variável.&lt;/p&gt;
+
+&lt;p&gt;Por exemplo, em C#:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c#&quot; data-lang=&quot;c#&quot;&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Note que terá a inferência do tipo inteiro
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&#39;A&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dar&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;á&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;erro&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;compila&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;çã&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pois&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tipo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;da&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vari&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;á&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vel&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;é&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inteiro&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Já na Tipagem Dinâmica temos a possibilidade de alterar o tipo da nossa variável em tempo de execução. A essa capacidade definimos uma linguagem como Dinâmica, como por exemplo, o nosso velho amigo Javascript, veja:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Note que terá a inferência do tipo inteiro&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;A&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//A partir desse momento sua variável é do tipo string com o valor &#39;A&#39;. Lance normal, segue o jogo.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Note que o C# tem inferência de tipo, é forte e é estática, já o javascript tem inferência de tipo, é fraca e é dinâmica.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Veja que uma linguagem com tipagem dinâmica, não implica em uma linguagem dinâmica, e em relação a isso já deixo o &lt;a href=&quot;http://www.akitaonrails.com/2008/02/22/tradu-o-tipagem-din-mica-vs-linguagem-din-mica-explicado&quot;&gt;post do akita&lt;/a&gt; que é uma tradução do post de Steven Devijver que analisa um terceiro post! :)&lt;/p&gt;
+
+&lt;p&gt;Um outro objetivo do blog é repassar conceito que deveriam ser básicos, mas pelo menos na minha cidade, a maioria das pessaos que conversam já vão direto pra um framework e passam batidos nesse tipo de diferença, o que acaba influenciando na qualidade dos profissionais, acredito eu.&lt;/p&gt;
+
+&lt;p&gt;Eae, vocês sabiam essas diferenças? Eu duvido!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Jun 2016 15:00:00 -0300</pubDate>
+        <link>http://felipequadros.com/programa%C3%A7%C3%A3o/b%C3%A1sico/iniciante/geral/teoria/2016/06/05/tipagem-fraca-forte-est%C3%A1tica-din%C3%A2mica-e-inferencia-de-tipo/</link>
+        <guid isPermaLink="true">http://felipequadros.com/programa%C3%A7%C3%A3o/b%C3%A1sico/iniciante/geral/teoria/2016/06/05/tipagem-fraca-forte-est%C3%A1tica-din%C3%A2mica-e-inferencia-de-tipo/</guid>
+        
+        
+        <category>programação</category>
+        
+        <category>básico</category>
+        
+        <category>iniciante</category>
+        
+        <category>geral</category>
+        
+        <category>teoria</category>
+        
+      </item>
     
       <item>
         <title>Startup Weekend - Um Novo Compromisso SWUDI</title>

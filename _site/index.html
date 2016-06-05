@@ -87,6 +87,83 @@
   <ul class="post-list">
     
       <li>
+        <span class="post-meta">Jun 5, 2016</span>
+
+        <h1>
+          <a class="post-link" href="/programa%C3%A7%C3%A3o/b%C3%A1sico/iniciante/geral/teoria/2016/06/05/tipagem-fraca-forte-est%C3%A1tica-din%C3%A2mica-e-inferencia-de-tipo/">Tipagem Fraca, Forte, Estática, Dinâmica e Inferência de Tipo</a>
+        </h1>
+        <div class="post-content">
+          <p>Nas últimas semanas tenho descoberto que existe um débito técnico muito grande em relação a programação.</p>
+
+<p><strong>Débito técnico: leia-se uma forma bonita que aprendi a falar para mostrar que tenho uma grande capacidade de programar sem saber de fato a aplicação, teoria, filosofia daquilo que está sendo escrito.</strong></p>
+
+<p>E foi daí que nasceu o assunto desse post. Um grande amigo me perguntou o que seria tipagem fraca, e eu, no auge da ignorância respondi que quando há declaração explícita de tipo na linguagem (string, integer, etc, etc), isso quer dizer que é uma linguagem fortemente tipada, e quando não temos essa declaração explícita, temos uma linguagem fraca. (Um brinde a ignorância, lá se foi meio Mega Latão). Nesses tempos turvos de muita informação e pouca formação a gente tem preguiça de pensar. Entretanto fui a luta e descobri não só a tipagem fraca e forte, mas também a inferência de tipo, a estática e a dinâmica.</p>
+
+<p><strong>Tipagem fraca, forte, dinâmica, estática e inferência de tipos são 5 conceitos diferentes</strong> - só pra ficar bem claro.</p>
+
+<h1 id="inferncia-de-tipo">Inferência de Tipo</h1>
+
+<p>A inferência de tipos é a capacidade do compilador entender/’adivinhar’ qual é o tipo de dados de determinada variável sem ela ter sido declarada no código escrito. Isso, mastigue o conceito com calma tomando a sua cerveja.</p>
+
+<p>Vamos aos exemplos. No C# temos inferência de tipo ao declarar variáveis locais com o “var” antes do nome da nossa variável, tipo:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">var</span> <span class="n">inferencia</span> <span class="p">=</span> <span class="m">10</span><span class="p">;</span> <span class="p">//</span><span class="n">Nossa</span> <span class="n">vari</span><span class="err">á</span><span class="n">vel</span> <span class="err">'</span><span class="n">inferencia</span><span class="err">'</span> <span class="n">ter</span><span class="err">á</span> <span class="n">seu</span> <span class="n">tipo</span> <span class="n">setado</span> <span class="n">em</span> <span class="n">tempo</span> <span class="n">de</span> <span class="n">compila</span><span class="err">çã</span><span class="n">o</span></code></pre></figure>
+
+<p>A lá, que beleza. Não declaramos tipo nenhum, mas na hora que o compilador enxerga o valor ele entende que é uma variável do tipo int, e é essa capacidade que define que uma linguagem <strong>infere tipos</strong>. Temos PHP, Python , Javascript, etc. Um exemplo contrário seria o Java, nela o tipo deve ser determinado na declaração da variável (Pelo que pesquisei está tendo um esforço gradual em colocar a inferência de tipo no java há algum tempo ver <a href="http://openjdk.java.net/jeps/286">JEP 286: Local-Variable Type Inferecen</a> ).</p>
+
+<h1 id="tipagem-forte-e-fraca">Tipagem Forte e Fraca</h1>
+
+<p>Uma forma simples de definir a tipagem forte e fraca é que, caso ela seja forte, teremos a verificação de tipos em todas as operações em tempo de execução ou compilação, já a fraca não temos essa verificação.</p>
+
+<p>Por exemplo, temos nosso amigo Javascript que é uma tipagem fraca, ou seja, além de não ter a capacidade de detectar erros em operações de tipos diferentes, ela nos dá um resultado nas operações de tipos diferentes, mas como assim?</p>
+
+<p>Em Javascript podemos fazer:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'1'</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1">// o resultado será '11'</span>
+<span class="s1">'1'</span> <span class="o">+</span> <span class="kc">true</span> <span class="c1">// o resultado será 1true</span></code></pre></figure>
+
+<p>Abra seu navegador e teste amiguinho. O PHP é uma outra linguagem de tipagem fraca.</p>
+
+<p>Um Exemplo de tipagem forte seria o Python. Fazendo as mesmas operações do Javascript no python temos:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="s">'1'</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span> <span class="n">File</span> <span class="s">"</span><span class="err">
+</span><span class="s">&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">concatenate</span> <span class="s">'str'</span> <span class="ow">and</span> <span class="s">'int'</span> <span class="n">objects</span><span class="o">&lt;/</span><span class="n">module</span><span class="o">&gt;&lt;/</span><span class="n">stdin</span><span class="o">&gt;</span>
+
+<span class="s">'1'</span> <span class="o">+</span> <span class="bp">True</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span> <span class="n">File</span> <span class="s">"</span><span class="err">
+</span><span class="s">&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">cannot</span> <span class="n">concatenate</span> <span class="s">'str'</span> <span class="ow">and</span> <span class="s">'bool'</span> <span class="n">objects</span><span class="o">&lt;/</span><span class="n">module</span><span class="o">&gt;&lt;/</span><span class="n">stdin</span><span class="o">&gt;</span></code></pre></figure>
+
+<p><strong>Note que PHP tem tipagem fraca e o Python tem tipagem forte mas as duas linguagens tem Inferência de Tipos.</strong></p>
+
+<h1 id="tipagem-esttica-e-dinmica">Tipagem Estática e Dinâmica</h1>
+
+<p>Tipagem Estática é a capacidade de uma linguagem ajudar na segurança de tipos, onde, a partir do momento que uma linguagem determina o tipo de uma variável esse tipo não pode ser alterado durante a compilação, fazendo com que o jovem programador não se preocupe tanto pois o compilador acusará erro caso seja alterado o tipo de uma variável.</p>
+
+<p>Por exemplo, em C#:</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">var</span> <span class="n">i</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="c1">//Note que terá a inferência do tipo inteiro
+</span><span class="n">i</span> <span class="p">=</span> <span class="sc">'A'</span><span class="p">;</span> <span class="p">//</span><span class="n">Dar</span><span class="err">á</span> <span class="n">erro</span> <span class="n">de</span> <span class="n">compila</span><span class="err">çã</span><span class="n">o</span> <span class="n">pois</span> <span class="n">o</span> <span class="n">tipo</span> <span class="n">da</span> <span class="n">vari</span><span class="err">á</span><span class="n">vel</span> <span class="err">é</span> <span class="n">inteiro</span></code></pre></figure>
+
+<p>Já na Tipagem Dinâmica temos a possibilidade de alterar o tipo da nossa variável em tempo de execução. A essa capacidade definimos uma linguagem como Dinâmica, como por exemplo, o nosso velho amigo Javascript, veja:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//Note que terá a inferência do tipo inteiro</span>
+<span class="nx">i</span> <span class="o">=</span> <span class="s1">'A'</span><span class="p">;</span> <span class="c1">//A partir desse momento sua variável é do tipo string com o valor 'A'. Lance normal, segue o jogo.</span></code></pre></figure>
+
+<p><strong>Note que o C# tem inferência de tipo, é forte e é estática, já o javascript tem inferência de tipo, é fraca e é dinâmica.</strong></p>
+
+<p>Veja que uma linguagem com tipagem dinâmica, não implica em uma linguagem dinâmica, e em relação a isso já deixo o <a href="http://www.akitaonrails.com/2008/02/22/tradu-o-tipagem-din-mica-vs-linguagem-din-mica-explicado">post do akita</a> que é uma tradução do post de Steven Devijver que analisa um terceiro post! :)</p>
+
+<p>Um outro objetivo do blog é repassar conceito que deveriam ser básicos, mas pelo menos na minha cidade, a maioria das pessaos que conversam já vão direto pra um framework e passam batidos nesse tipo de diferença, o que acaba influenciando na qualidade dos profissionais, acredito eu.</p>
+
+<p>Eae, vocês sabiam essas diferenças? Eu duvido!</p>
+
+        </div>
+      </li>
+    
+      <li>
         <span class="post-meta">May 23, 2016</span>
 
         <h1>
