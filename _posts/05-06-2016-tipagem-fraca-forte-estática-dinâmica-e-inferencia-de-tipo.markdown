@@ -15,7 +15,6 @@ Nas últimas semanas tenho descoberto que existe um débito técnico muito grand
 
 **Débito técnico: leia-se uma forma bonita que aprendi a falar para mostrar que tenho uma grande capacidade de programar sem saber de fato a aplicação, teoria, filosofia daquilo que está sendo escrito.**
 
-E foi daí que nasceu o assunto desse post. Um grande amigo me perguntou o que seria tipagem fraca, e eu, no auge da ignorância respondi que quando há declaração explícita de tipo na linguagem (string, integer, etc, etc), isso quer dizer que é uma linguagem fortemente tipada, e quando não temos essa declaração explícita, temos uma linguagem fraca. (Um brinde a ignorância, lá se foi meio Mega Latão). Nesses tempos turvos de muita informação e pouca formação a gente tem preguiça de pensar. Entretanto fui a luta e descobri não só a tipagem fraca e forte, mas também a inferência de tipo, a estática e a dinâmica.
 
 **Tipagem fraca, forte, dinâmica, estática e inferência de tipos são 5 conceitos diferentes** - só pra ficar bem claro.
 
